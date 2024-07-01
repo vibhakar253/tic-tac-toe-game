@@ -1,0 +1,177 @@
+/* Container for the entire game */
+.container {
+  text-align: center;
+  font-family: "Poppins", sans-serif;
+  padding: 10px; /* Adding padding for better spacing on smaller screens */
+}
+
+/* Title styling */
+.title {
+  margin-top: 20px; /* Reduce margin for better spacing on small screens */
+  color: #1F3540;
+  font-size: 2em; /* Use relative font size */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap; /* Allow wrapping on small screens */
+}
+
+.title span {
+  color: #26FFCB;
+  padding-left: 15px;
+}
+
+/* Status display styling */
+.status {
+  font-size: 1.5em; /* Relative font size */
+  color: #1F3540;
+  margin-top: 20px;
+  font-weight: bold;
+}
+
+/* Reset button styling */
+.reset {
+  width: 80%; /* Use percentage for better responsiveness */
+  max-width: 250px;
+  height: 60px; /* Reduce height for smaller screens */
+  border: none;
+  outline: none;
+  cursor: pointer;
+  border-radius: 30px;
+  background: #1F3540;
+  font-size: 1.2em; /* Use relative font size */
+  color: #26FFCB;
+  margin-top: 25px;
+  margin-bottom: 50px;
+}
+
+/* Board styling */
+.board {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  margin: 20px auto; /* Adjust margin for smaller screens */
+  width: 100%; /* Use full width */
+  max-width: 600px; /* Limit max width */
+  height: auto; /* Let height adjust automatically */
+  aspect-ratio: 1; /* Maintain square aspect ratio */
+}
+
+/* Box styling */
+.boxes {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%; /* Use full width */
+  aspect-ratio: 1; /* Maintain square shape */
+  background: #1F3540;
+  border: 4px solid #0F1B21;
+  border-radius: 12px;
+  cursor: pointer;
+}
+
+/* Image styling inside boxes */
+.boxes img {
+  max-width: 60%; /* Adjust image size for better fit */
+  height: auto; /* Maintain aspect ratio */
+}
+
+/* Image styling in title */
+.title img {
+  height: 30px; /* Reduce image size for better fit on small screens */
+  margin-left: 10px; /* Add some spacing */
+}
+
+/* Modal styling */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.5);
+  padding: 10px; /* Add padding to ensure content isn't cramped on small screens */
+  box-sizing: border-box; /* Include padding in the width and height */
+}
+
+.modal-content {
+  background: #ffffff;
+  padding: 20px; /* Reduce padding for better fit on small screens */
+  border-radius: 10px;
+  text-align: center;
+  font-weight: bold;
+  width: 90%; /* Use percentage width for better responsiveness */
+  max-width: 400px; /* Limit max width */
+}
+
+.close-modal {
+  margin-top: 20px;
+  padding: 10px 20px;
+  font-size: 1em; /* Use relative font size */
+  cursor: pointer;
+  background: #1F3540;
+  color: #26FFCB;
+  border: none;
+  border-radius: 5px;
+}
+
+/* Responsive styles for small screens */
+@media (max-width: 768px) {
+  .title {
+    font-size: 1.5em; /* Adjust font size */
+  }
+
+  .reset {
+    height: 50px; /* Adjust button height */
+    font-size: 1em; /* Adjust font size */
+  }
+
+  .status {
+    font-size: 1.2em; /* Adjust font size */
+  }
+
+  .boxes {
+    height: auto; /* Let height adjust automatically */
+    max-width: 100px; /* Limit max width */
+  }
+
+  .boxes img {
+    max-width: 50%; /* Adjust image size */
+  }
+
+  .modal-content {
+    width: 90%; /* Use most of the screen width */
+    max-width: 300px; /* Limit max width */
+  }
+}
+
+@media (max-width: 480px) {
+  .title {
+    font-size: 1.2em; /* Further reduce font size */
+  }
+
+  .reset {
+    height: 40px; /* Further reduce button height */
+    font-size: 0.9em; /* Further reduce font size */
+  }
+
+  .status {
+    font-size: 1em; /* Further reduce font size */
+  }
+
+  .boxes {
+    max-width: 80px; /* Further limit box size */
+  }
+
+  .boxes img {
+    max-width: 40%; /* Further adjust image size */
+  }
+
+  .modal-content {
+    width: 95%; /* Use most of the screen width */
+    max-width: 280px; /* Further limit max width */
+  }
+}
